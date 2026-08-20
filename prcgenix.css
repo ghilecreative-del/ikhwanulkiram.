@@ -1,0 +1,1981 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+        linear-gradient(
+            135deg,
+            #020b16 0%,
+            #061525 45%,
+            #03101d 100%
+        );
+
+    color: #ffffff;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.background-glow {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    filter: blur(140px);
+
+}
+
+
+.glow-one {
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    left: -200px;
+
+    background: #075985;
+
+    opacity: .18;
+
+}
+
+
+.glow-two {
+
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+    top: 30%;
+
+    background: #1d4ed8;
+
+    opacity: .12;
+
+}
+
+
+.glow-three {
+
+    width: 400px;
+    height: 400px;
+
+    left: 20%;
+    bottom: -250px;
+
+    background: #0369a1;
+
+    opacity: .12;
+
+}
+
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.price-page {
+
+    width: min(
+        1120px,
+        100%
+    );
+
+    margin: auto;
+
+    padding:
+        70px 25px 40px;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.price-header {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 100px;
+
+}
+
+
+.logo-wrapper {
+
+    width: 90px;
+    height: 90px;
+
+    margin:
+        0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.logo-wrapper img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.eyebrow {
+
+    display: inline-block;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+    color: #38bdf8;
+
+    margin-bottom: 12px;
+
+}
+
+
+.price-header h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            55px,
+            9vw,
+            90px
+        );
+
+    line-height: .9;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #dbeafe 45%,
+            #38bdf8
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 25px;
+
+}
+
+
+.header-description {
+
+    max-width: 480px;
+
+    margin: auto;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =====================================================
+   SECTION INTRO
+===================================================== */
+
+.section-intro {
+
+    margin-bottom: 35px;
+
+}
+
+
+.section-intro > span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #38bdf8;
+
+}
+
+
+.section-intro h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            36px,
+            5vw,
+            52px
+        );
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    margin-top: 8px;
+
+}
+
+
+.section-intro h2 em {
+
+    font-style: italic;
+
+    color: #7dd3fc;
+
+}
+
+
+.section-intro p {
+
+    margin-top: 10px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   PACKAGES
+===================================================== */
+
+.packages-section {
+
+    margin-bottom: 100px;
+
+}
+
+
+.packages-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap: 18px;
+
+}
+
+
+
+/* =====================================================
+   PRICE CARD
+===================================================== */
+
+.price-card {
+
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(
+                13,
+                39,
+                65,
+                .95
+            ),
+            rgba(
+                3,
+                17,
+                30,
+                .98
+            )
+        );
+
+    border:
+        1px solid
+        rgba(
+            125,
+            211,
+            252,
+            .12
+        );
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.price-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(
+            56,
+            189,
+            248,
+            .4
+        );
+
+    box-shadow:
+        0 25px 70px
+        rgba(
+            0,
+            80,
+            180,
+            .18
+        );
+
+}
+
+
+
+/* =====================================================
+   FEATURED CARD
+===================================================== */
+
+.price-card.featured {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c4267,
+            #061a2b 70%
+        );
+
+    border-color:
+        rgba(
+            56,
+            189,
+            248,
+            .35
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            0,
+            100,
+            200,
+            .12
+        );
+
+}
+
+
+.card-glow {
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -130px;
+    top: -130px;
+
+    background:
+        #38bdf8;
+
+    opacity: .08;
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+}
+
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.card-top {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.package-number {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    color: #7dd3fc;
+
+}
+
+
+.package-label {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #64748b;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.price-card h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.package-subtitle {
+
+    color: #38bdf8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* =====================================================
+   PACKAGE LIST
+===================================================== */
+
+.package-list {
+
+    list-style: none;
+
+    margin-top: 10px;
+
+}
+
+
+.package-list li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+}
+
+
+.package-list i {
+
+    color: #38bdf8;
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+
+}
+
+
+.package-list b {
+
+    color: #ffffff;
+
+}
+
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price-box {
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+}
+
+
+.price-box span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        2px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.price-box strong {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 36px;
+
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #7dd3fc
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+
+
+/* =====================================================
+   SPECIAL NOTE
+===================================================== */
+
+.special-note {
+
+    display: flex;
+
+    align-items:
+        flex-start;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .1
+        );
+
+}
+
+
+.special-note i {
+
+    color: #38bdf8;
+
+    font-size: 17px;
+
+}
+
+
+.special-note p {
+
+    color: #cbd5e1;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* =====================================================
+   EXTRAS
+===================================================== */
+
+.extras-section {
+
+    margin-bottom: 100px;
+
+}
+
+
+.extras-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 15px;
+
+}
+
+
+.extra-card {
+
+    min-height: 210px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content:
+        space-between;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(
+                11,
+                42,
+                70,
+                .9
+            ),
+            rgba(
+                3,
+                19,
+                33,
+                .95
+            )
+        );
+
+    border:
+        1px solid
+        rgba(
+            125,
+            211,
+            252,
+            .1
+        );
+
+    border-radius: 20px;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+
+}
+
+
+.extra-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(
+            56,
+            189,
+            248,
+            .35
+        );
+
+}
+
+
+.extra-top {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.extra-top span {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: #38bdf8;
+
+    font-size: 18px;
+
+}
+
+
+.extra-top i {
+
+    color: #7dd3fc;
+
+    font-size: 20px;
+
+}
+
+
+.extra-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.extra-card p {
+
+    color: #64748b;
+
+    font-size: 11px;
+
+}
+
+
+.extra-card > strong {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+    color: #ffffff;
+
+}
+
+
+
+/* =====================================================
+   NOTES
+===================================================== */
+
+.notes-section {
+
+    margin-bottom: 100px;
+
+}
+
+
+.notes-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a2b46,
+            #041421
+        );
+
+    border:
+        1px solid
+        rgba(
+            125,
+            211,
+            252,
+            .12
+        );
+
+    border-radius: 25px;
+
+    padding:
+        20px 35px;
+
+}
+
+
+.note {
+
+    display: grid;
+
+    grid-template-columns:
+        45px 1fr;
+
+    gap: 15px;
+
+    padding:
+        22px 0;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .08
+        );
+
+}
+
+
+.note:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.note > span {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 16px;
+
+    color: #38bdf8;
+
+}
+
+
+.note h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.note p {
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    max-width: 700px;
+
+}
+
+
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+
+.portfolio-section {
+
+    margin-bottom: 100px;
+
+}
+
+
+.portfolio-title {
+
+    margin-bottom: 35px;
+
+}
+
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 12px;
+
+}
+
+
+.portfolio-item {
+
+    position: relative;
+
+    aspect-ratio:
+        3 / 4;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #0b1c2c;
+
+    border:
+        1px solid
+        rgba(
+            125,
+            211,
+            252,
+            .1
+        );
+
+}
+
+
+.portfolio-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(
+                0,
+                0,
+                0,
+                .25
+            ),
+            transparent 50%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.portfolio-item img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s
+        cubic-bezier(
+            .2,
+            .8,
+            .2,
+            1
+        );
+
+}
+
+
+.portfolio-item:hover img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+
+/* =====================================================
+   INSTAGRAM BUTTON
+===================================================== */
+
+.portfolio-button-wrapper {
+
+    display: flex;
+
+    justify-content:
+        center;
+
+    margin-top: 30px;
+
+}
+
+
+.instagram-button {
+
+    display: inline-flex;
+
+    align-items:
+        center;
+
+    gap: 12px;
+
+    padding:
+        14px 20px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border:
+        1px solid
+        rgba(
+            125,
+            211,
+            252,
+            .2
+        );
+
+    border-radius: 50px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .03
+        );
+
+    transition:
+        .35s ease;
+
+}
+
+
+.instagram-button i:first-child {
+
+    color: #38bdf8;
+
+    font-size: 18px;
+
+}
+
+
+.instagram-button:hover {
+
+    background:
+        rgba(
+            56,
+            189,
+            248,
+            .1
+        );
+
+    border-color:
+        #38bdf8;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.instagram-button i:last-child {
+
+    font-size: 16px;
+
+}
+
+
+
+/* =====================================================
+   CONTRACT
+===================================================== */
+
+.contract-section {
+
+    margin-bottom: 70px;
+
+}
+
+
+.contract-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        65px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c4a6e 0%,
+            #082b46 45%,
+            #020e1b 100%
+        );
+
+    border:
+        1px solid
+        rgba(
+            125,
+            211,
+            252,
+            .25
+        );
+
+    box-shadow:
+        0 30px 100px
+        rgba(
+            0,
+            80,
+            180,
+            .14
+        );
+
+}
+
+
+.contract-glow {
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -200px;
+    top: -200px;
+
+    border-radius: 50%;
+
+    background:
+        #38bdf8;
+
+    opacity: .08;
+
+    filter:
+        blur(60px);
+
+}
+
+
+.contract-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+}
+
+
+.contract-content h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            40px,
+            6vw,
+            65px
+        );
+
+    line-height: .98;
+
+    font-weight: 600;
+
+    margin:
+        8px 0 20px;
+
+}
+
+
+.contract-content h2 em {
+
+    display: block;
+
+    color: #7dd3fc;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+}
+
+
+.contract-content p {
+
+    max-width: 580px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* =====================================================
+   WHATSAPP BUTTON
+===================================================== */
+
+.whatsapp-button {
+
+    display: inline-flex;
+
+    align-items:
+        center;
+
+    gap: 12px;
+
+    padding:
+        15px 21px;
+
+    background:
+        #ffffff;
+
+    color:
+        #06111f;
+
+    text-decoration: none;
+
+    border-radius:
+        50px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    transition:
+        .35s ease;
+
+}
+
+
+.whatsapp-button > i:first-child {
+
+    color: #16a34a;
+
+    font-size: 20px;
+
+}
+
+
+.whatsapp-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            .25
+        );
+
+}
+
+
+.whatsapp-button > i:last-child {
+
+    font-size: 16px;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        30px 0;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .08
+        );
+
+}
+
+
+footer img {
+
+    width: 50px;
+    height: 50px;
+
+    object-fit:
+        contain;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+footer p {
+
+    color: #475569;
+
+    font-size:
+        10px;
+
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (
+    max-width: 850px
+) {
+
+    .packages-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .extras-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .portfolio-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (
+    max-width: 600px
+) {
+
+
+    .price-page {
+
+        padding:
+            45px 16px 25px;
+
+    }
+
+
+    .price-header {
+
+        margin-bottom:
+            70px;
+
+    }
+
+
+    .logo-wrapper {
+
+        width: 70px;
+        height: 70px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .price-header h1 {
+
+        font-size:
+            58px;
+
+        letter-spacing:
+            -1.5px;
+
+    }
+
+
+    .header-description {
+
+        font-size:
+            12px;
+
+        padding:
+            0 15px;
+
+    }
+
+
+    .section-intro h2 {
+
+        font-size:
+            38px;
+
+    }
+
+
+    .packages-section,
+    .extras-section,
+    .notes-section,
+    .portfolio-section {
+
+        margin-bottom:
+            75px;
+
+    }
+
+
+    .price-card {
+
+        min-height:
+            350px;
+
+        padding:
+            27px;
+
+        border-radius:
+            21px;
+
+    }
+
+
+    .price-card h3 {
+
+        font-size:
+            29px;
+
+    }
+
+
+    .price-box strong {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .extras-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .extra-card {
+
+        min-height:
+            180px;
+
+    }
+
+
+    .notes-box {
+
+        padding:
+            10px 20px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .note {
+
+        grid-template-columns:
+            30px 1fr;
+
+        gap:
+            8px;
+
+        padding:
+            18px 0;
+
+    }
+
+
+    .note h3 {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .note p {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .portfolio-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap:
+            8px;
+
+    }
+
+
+    .portfolio-item {
+
+        border-radius:
+            12px;
+
+    }
+
+
+    .contract-card {
+
+        padding:
+            40px 25px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    .contract-content h2 {
+
+        font-size:
+            42px;
+
+    }
+
+
+    .contract-content p {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .whatsapp-button {
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   VERY SMALL PHONE
+===================================================== */
+
+@media (
+    max-width: 380px
+) {
+
+    .price-header h1 {
+
+        font-size:
+            50px;
+
+    }
+
+
+    .price-card {
+
+        padding:
+            23px;
+
+    }
+
+
+    .price-card h3 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .contract-content h2 {
+
+        font-size:
+            36px;
+
+    }
+
+}
+.price-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.price-card-link .price-card {
+    height: 100%;
+    cursor: pointer;
+    transition:
+        transform 0.4s cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.4s ease;
+}
+
+.price-card-link:hover .price-card {
+    transform: translateY(-7px);
+}
+
+.price-card-link:active .price-card {
+    transform: scale(0.985);
+}
+/* ==========================================
+   IKHWAN LOADING SCREEN
+   ========================================== */
+
+#ikhwan-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #09213c 0%,
+            #072240 30%,
+            #03152a 60%,
+            #040015 100%
+        );
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+/* ==========================================
+   SAAT LOADING SELESAI
+   ========================================== */
+
+#ikhwan-loader.ikhwan-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
+.ikhwan-loader-content {
+    width: 100%;
+    max-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================================
+   LOGO IKHWAN
+   ========================================== */
+
+.ikhwan-logo {
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 52px;
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 55px;
+
+    animation: ikhwan-logo-in 0.8s ease;
+}
+
+
+/* Warna tanda > */
+
+.ikhwan-logo span {
+    color: #6cbaff;
+
+    margin-left: 3px;
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+   ========================================== */
+
+.ikhwan-progress {
+    width: 300px;
+    height: 3px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.16);
+}
+
+
+/* Garis Orange */
+
+#ikhwan-progress-bar {
+    width: 0%;
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #032c41,
+            #053d68,
+            #00d0ff
+        );
+
+    box-shadow:
+        0 0 6px rgba(16, 132, 171, 0.9),
+        0 0 14px rgba(0, 64, 132, 0.5);
+
+    transition: width 0.08s linear;
+}
+
+
+/* ==========================================
+   ANIMASI LOGO
+   ========================================== */
+
+@keyframes ikhwan-logo-in {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .ikhwan-logo {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .ikhwan-progress {
+        width: 280px;
+        max-width: 80%;
+    }
+
+}
+
+
+/* ==========================================
+   LAYAR KECIL
+   ========================================== */
+
+@media (max-height: 500px) {
+
+    .ikhwan-logo {
+        margin-bottom: 35px;
+        font-size: 42px;
+    }
+
+}
+/* =====================================================
+   GITHUB PAGES SAFE PREMIUM LOADER
+===================================================== */
+#ikhwan-loader{
+    position:fixed;
+    inset:0;
+    z-index:2147483647;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#02060a;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transition:opacity .8s ease,visibility .8s ease;
+}
+#ikhwan-loader.ikhwan-hidden{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+.ikhwan-loader-inner{
+    width:min(420px,82vw);
+}
+.ikhwan-progress{
+    width:100%;
+    height:3px;
+    overflow:hidden;
+    border-radius:999px;
+    background:rgba(255,255,255,.10);
+}
+#ikhwan-progress-bar{
+    width:0%;
+    height:100%;
+    border-radius:999px;
+    background:linear-gradient(90deg,#38bdf8,#7dd3fc,#fff);
+    box-shadow:0 0 18px rgba(56,189,248,.65);
+    transition:width .12s linear;
+}
